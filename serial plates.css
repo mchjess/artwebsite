@@ -1,0 +1,140 @@
+    /* ------------------------------
+       Root palette & global rules
+    ------------------------------ */
+    :root {
+      --ink-dark: #031927;
+      --ink-light: #E7F2F3;
+      --umber: #2E1E0F;
+      --clay: #A77464;
+      --oxide: #88292F;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--umber);
+      color: var(--ink-light);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    body {
+      padding: 4rem 0;
+    }
+
+    /* ------------------------------
+       Header / register
+    ------------------------------ */
+    header {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 5rem auto;
+      padding: 0 2rem;
+    }
+
+    header h1 {
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 0 0 0.5rem 0;
+      color: var(--ink-light);
+    }
+
+    header p {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      margin: 0;
+      color: var(--clay);
+    }
+
+    /* ------------------------------
+       Plates container
+    ------------------------------ */
+    .plates {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    /* ------------------------------
+       Individual plate
+    ------------------------------ */
+    .plate {
+      width: 100%;
+      padding: 4rem 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Light and dark plate fields */
+    .plate.light {
+      background-color: var(--ink-light);
+    }
+
+    .plate.dark {
+      background-color: var(--ink-dark);
+    }
+
+    /* ------------------------------
+       Image frame
+    ------------------------------ */
+    .frame {
+      width: 70%;
+      max-width: 720px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .frame img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ------------------------------
+       Blank plate (pause)
+    ------------------------------ */
+    .plate.blank {
+      background-color: transparent;
+      padding: 6rem 0;
+    }
+
+    .blank .frame {
+      border-top: 1px solid rgba(231, 242, 243, 0.15);
+      height: 1px;
+    }
+
+    /* ------------------------------
+       Footer
+    ------------------------------ */
+    footer {
+      margin-top: 6rem;
+      text-align: center;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--clay);
+    }
+
+    /* ------------------------------
+       Responsive restraint
+    ------------------------------ */
+    @media (max-width: 768px) {
+      body {
+        padding: 2rem 0;
+      }
+
+      .frame {
+        width: 85%;
+      }
+
+      .plates {
+        gap: 3.5rem;
+      }
+    }
