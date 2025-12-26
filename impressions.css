@@ -6,6 +6,24 @@
 --oxide: #88292F;
 }
 
+.contact-sheet {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 6px;
+
+  margin: 2rem 0 3rem 0;
+  padding: 0;
+
+  opacity: 0.9;
+}
+
+.contact-sheet img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  background-color: #031927; /* deep blue-black from your palette */
+}
 
 *, *::before, *::after {
 box-sizing: border-box;
