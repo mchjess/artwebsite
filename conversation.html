@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Notes — Practice</title>
+
+  <style>
+    /* ------------------------------
+       Root palette
+    ------------------------------ */
+    :root {
+      --ink-dark: #031927;
+      --ink-light: #E7F2F3;
+      --umber: #2E1E0F;
+      --clay: #A77464;
+      --oxide: #88292F;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--ink-light);
+      color: var(--umber);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    body {
+      padding: 4rem 0;
+    }
+
+    /* ------------------------------
+       Header
+    ------------------------------ */
+    header {
+      max-width: 760px;
+      margin: 0 auto 5rem auto;
+      padding: 0 2rem;
+    }
+
+    header h1 {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin: 0 0 1rem 0;
+    }
+
+    header p {
+      font-size: 0.9rem;
+      max-width: 60ch;
+      margin: 0;
+      color: var(--umber);
+    }
+
+    /* ------------------------------
+       Notes container
+    ------------------------------ */
+    .notes {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    /* ------------------------------
+       Individual note
+    ------------------------------ */
+    .note {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .note .meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .note time {
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-variant-numeric: tabular-nums;
+      color: var(--clay);
+    }
+
+    .note .role {
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--oxide);
+    }
+
+    .note h2 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin: 0.5rem 0 0.25rem 0;
+    }
+
+    .note .content {
+      font-size: 0.9rem;
+      max-width: 62ch;
+    }
+
+    .note .content p {
+      margin: 0 0 1rem 0;
+    }
+
+    .note .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .note .content ul {
+      margin: 0.5rem 0 1rem 1.25rem;
+    }
+
+    /* ------------------------------
+       Optional image (footnote-style)
+    ------------------------------ */
+    .note figure {
+      margin: 1.5rem 0 0 0;
+      max-width: 420px;
+    }
+
+    .note figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .note figcaption {
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      color: var(--clay);
+      margin-top: 0.4rem;
+    }
+
+    /* ------------------------------
+       Footer
+    ------------------------------ */
+    footer {
+      margin-top: 6rem;
+      text-align: center;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--clay);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 2rem 0;
+      }
+
+      .notes {
+        gap: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Studio Notes</h1>
+    <p>
+      This space holds working thoughts, material observations, and decisions around making, framing, and showing the work. It is not explanatory; it is conversational.
+    </p>
+  </header>
+
+  <main class="notes">
+
+    <!-- Note 001 -->
+    <section class="note">
+      <div class="meta">
+        <time datetime="2025-02-02">02 Feb 2025</time>
+        <div class="role">Maker</div>
+      </div>
+      <h2>On restraint</h2>
+      <div class="content">
+        <p>I am no longer interested in proving dexterity through excess. The discipline here is subtraction — allowing contact, pressure, and time to register without intervention.</p>
+      </div>
+    </section>
+
+    <!-- Note 002 -->
+    <section class="note">
+      <div class="meta">
+        <time datetime="2025-02-06">06 Feb 2025</time>
+        <div class="role">Materials</div>
+      </div>
+      <h2>Chalk behaviour on compressed fibre</h2>
+      <div class="content">
+        <p>Repeated rubbing polishes the paper surface. After a threshold, the chalk stops adhering and begins to slide. This is not failure — it signals completion.</p>
+      </div>
+    </section>
+
+    <!-- Note 003 with image -->
+    <section class="note">
+      <div class="meta">
+        <time datetime="2025-02-10">10 Feb 2025</time>
+        <div class="role">Exhibitor</div>
+      </div>
+      <h2>Plates as decision</h2>
+      <div class="content">
+        <p>The plate format removes narrative temptation. Each work stands as a resolved act, not a step toward something else.</p>
+      </div>
+      <figure>
+        <img src="images/material-test.jpg" alt="Material test detail" />
+        <figcaption>Surface compression after repeated passes</figcaption>
+      </figure>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Studio notes — ongoing</p>
+  </footer>
+
+</body>
+</html>
