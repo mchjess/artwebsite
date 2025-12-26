@@ -25,6 +25,13 @@
   background-color: #031927; /* deep blue-black from your palette */
 }
 
+.contact-sheet a {
+  display: block;
+}
+
+.contact-sheet a:hover img {
+  opacity: 0.75;
+}
 
 *, *::before, *::after {
 box-sizing: border-box;
