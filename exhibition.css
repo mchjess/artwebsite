@@ -51,6 +51,15 @@
       color: var(--brown);
     }
 
+    a:visited {
+  color: var(--clay);
+}
+
+a:hover {
+  color: var(--brown);             /* oxide red on intent */
+  border-bottom-color: rgba(136, 41, 47, 0.6);
+}
+
     /* ---------- Gallery Sections ---------- */
     section {
       margin-bottom: 4rem;
